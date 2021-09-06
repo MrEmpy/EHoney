@@ -38,8 +38,9 @@ In addition, EHoney offers some advantages to have a good result in the search f
 ```
 $ git clone https://github.com/MrEmpy/EHoney.git
 $ cd EHoney
-$ chmod +x install.sh
-$ ./install.sh
+$ chmod +x EHoney.py
+$ pip install -r requirements.txt
+$ ./EHoney.py
 ```
 (run install.sh as root)
 
