@@ -42,7 +42,6 @@ $ chmod +x EHoney.py
 $ pip install -r requirements.txt
 $ ./EHoney.py
 ```
-(run install.sh as root)
 
 ### Screenshots:
 
