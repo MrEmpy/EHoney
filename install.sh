@@ -37,7 +37,8 @@ main () {
     cp -r reports /etc/ehoney
     cp -r config /etc/ehoney
     sudo chown $OLDUSER:$OLDUSER /etc/ehoney/*/*/*/*
-    printf '\n\033[0;32m[+] \033[0;37mInstalled! Execute "ehoney".\nConfigure ports in "/etc/ehoney/config/ports.conf".\nLogs were in "/etc/ehoney/logs" and reports in "/etc/ehoney/reports".'
+    chmod +x /usr/bin/ehoney
+    printf '\n\033[0;32m[+] \033[0;37mInstalled! Execute "ehoney".\nConfigure ports in "/etc/ehoney/config/ports.conf".\nLogs were in "/etc/ehoney/logs" and reports in "/etc/ehoney/reports".\n'
 }
 
 main
