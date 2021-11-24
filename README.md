@@ -1,4 +1,5 @@
-## About EHoney 
+<h1 align="center">「🍯」About EHoney</h1>
+
 ![banner](assets/banner.png)
 
 <img src="https://media.discordapp.net/attachments/724351008440057950/882755118162935898/20210901_193204.png?width=62&height=62">
