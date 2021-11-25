@@ -29,7 +29,7 @@ main () {
     sudo apt-get install python3-pip python3 -y
     sudo pip install -r requirements.txt
     cp EHoney.py /usr/bin/ehoney
-    chmod +x /usr/bin/EHoney
+    chmod +x /usr/bin/ehoney
     chmod +x EHoney.py
     mkdir /etc/ehoney
     cp -r logs /etc/ehoney
