@@ -23,11 +23,15 @@ printf "\033[0;33m       .;oOOOOd;. .;oOOOOd:.
 \n"
 sleep 1
 
+if [[ $EUID -ne 0 ]]; then
+    printf "\033[0;33m[-] \033[0;37mThis script must be run as root" 
+    exit 1
+fi
+
 main () {
-    OLDUSER=$USER
     printf "\n\033[0;34m[*] \033[0;37mInstalling...\n"
-    sudo apt-get install python3-pip python3 -y
-    sudo pip install -r requirements.txt
+    apt-get install python3-pip python3 -y
+    pip install -r requirements.txt
     cp EHoney.py /usr/bin/ehoney
     chmod +x /usr/bin/ehoney
     chmod +x EHoney.py
@@ -36,8 +40,11 @@ main () {
     cp -r web /etc/ehoney
     cp -r reports /etc/ehoney
     cp -r config /etc/ehoney
-    sudo chown $OLDUSER:$OLDUSER /etc/ehoney/*/*/*/*
-    chmod +x /usr/bin/ehoney
+    chmod 777 /etc/ehoney
+    chmod 777 /etc/ehoney/logs
+    chmod 777 /etc/ehoney/web
+    chmod 777 /etc/ehoney/reports
+    chmod 777 /etc/ehoney/config
     printf '\n\033[0;32m[+] \033[0;37mInstalled! Execute "ehoney".\nConfigure ports in "/etc/ehoney/config/ports.conf".\nLogs were in "/etc/ehoney/logs" and reports in "/etc/ehoney/reports".\n'
 }
 
