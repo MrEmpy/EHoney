@@ -21,6 +21,7 @@ In addition, EHoney offers some advantages to have a good result in the search f
 * Get information about an IP address
 * Get users used during authentication
 * Detection of port scanners like Nmap
+* Termux support
 
 ### Available Reports:
 
@@ -36,6 +37,8 @@ In addition, EHoney offers some advantages to have a good result in the search f
 
 ### Install:
 
+#### Linux:
+
 ```
 $ git clone https://github.com/MrEmpy/EHoney.git
 $ cd EHoney
@@ -43,6 +46,18 @@ $ chmod +x EHoney.py
 $ pip install -r requirements.txt
 $ ./EHoney.py
 ```
+
+#### Termux:
+
+```
+$ git clone https://github.com/MrEmpy/EHoney.git
+$ cd EHoney
+$ cd termux
+$ chmod +x EHoney.py
+$ pip install -r requirements.txt
+$ ./EHoney.py
+```
+
 
 ### Screenshots:
 
